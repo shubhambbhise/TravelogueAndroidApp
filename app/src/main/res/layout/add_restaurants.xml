@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/addrest_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:editable="false"
+        android:text="Please add atleast one Restaurant"
+        android:textColor="#1B5E20"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/addrest_displaypic"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/uploadimage" />
+
+    <RatingBar
+        android:id="@+id/addrest_ratingbar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:stepSize="0.1" />
+
+    <EditText
+        android:id="@+id/addrest_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Restaurant Name"
+        android:backgroundTint="#F1F8E9"
+        android:padding="10dp"
+        android:textColor="#1B5E20" />
+
+    <EditText
+        android:id="@+id/addrest_experience"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.26"
+        android:backgroundTint="#F1F8E9"
+        android:ems="10"
+        android:hint="Experience"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="#1B5E20" />
+
+    <EditText
+        android:id="@+id/addrest_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#F1F8E9"
+        android:ems="10"
+        android:hint="Rating on scale of 5"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="#1B5E20" />
+
+    <EditText
+        android:id="@+id/addrest_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#F1F8E9"
+        android:ems="10"
+        android:hint="Approx meal per head cost in $"
+        android:inputType="numberDecimal"
+        android:padding="10dp"
+        android:textColor="#1B5E20" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addrest_addmore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFB74D"
+            android:text="Add More" />
+
+        <Button
+            android:id="@+id/addrest_done"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#FFB74D"
+            android:text="Proceed" />
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

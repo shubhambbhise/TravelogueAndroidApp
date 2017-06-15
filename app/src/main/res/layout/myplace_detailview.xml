@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/shiftDetailAppBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlways"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="94dp"
+            app:contentScrim="?attr/colorPrimary"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentTop="true"
+            android:id="@+id/collapsing_toolbar">
+            <ImageView
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent"
+                android:id="@+id/palce_image"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax">
+            </ImageView>
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:id="@+id/toolbar_main"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin">
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="80dp">
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/main_place_desc"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Near by Places"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"/>
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/place_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimaryDark"
+                app:tabTextColor="@color/tabTextColor"
+                app:tabMode="scrollable"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabSelectedTextColor="#FFFFFF"
+                app:tabGravity="fill">            <!--app:tabSelectedColor="#FFFFFF"-->
+            </android.support.design.widget.TabLayout>
+            <android.support.v4.view.ViewPager
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/places_pager"
+                tools:context=".MyPlaces_Activity"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Restaurants Visited"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"/>
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/restaurant_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimaryDark"
+                app:tabTextColor="@color/tabTextColor"
+                app:tabMode="scrollable"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabSelectedTextColor="#FFFFFF"
+                app:tabGravity="fill">            <!--app:tabSelectedColor="#FFFFFF"-->
+
+            </android.support.design.widget.TabLayout>
+            <android.support.v4.view.ViewPager
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/restaurant_pager"
+                tools:context=".MyPlaces_Activity"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Hotels Visited"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"/>
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/hotel_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/colorPrimaryDark"
+                app:tabTextColor="@color/tabTextColor"
+                app:tabMode="scrollable"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabSelectedTextColor="#FFFFFF"
+                app:tabGravity="fill">
+                <!--app:tabSelectedColor="#FFFFFF"-->
+
+            </android.support.design.widget.TabLayout>
+            <android.support.v4.view.ViewPager
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/hotels_pager"
+                tools:context=".MyPlaces_Activity"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

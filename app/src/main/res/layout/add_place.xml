@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/addplace_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please add atleast one Place"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:editable="false"
+        android:textColor="#1B5E20"/>
+
+    <EditText
+        android:id="@+id/addplace_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Place Name"
+        android:layout_weight="0.26"
+        android:backgroundTint="#F1F8E9"
+        android:padding="10dp"
+        android:textColor="#1B5E20" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/addplace_experience"
+        android:hint="Experiences"
+        android:layout_weight="0.26"
+        android:backgroundTint="#F1F8E9"
+        android:padding="10dp"
+        android:textColor="#1B5E20"
+        android:layout_marginTop="5dp"/>
+
+    <!--<EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:hint="Youtube URL" />-->
+
+    <!--<fragment
+        android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/youtube_fragment"
+        android:layout_gravity="center_horizontal" />-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+    <ImageView
+        android:layout_width="179dp"
+        android:layout_height="match_parent"
+        android:id="@+id/addplace_displaypic"
+        android:src="@drawable/uploadimage"
+        android:padding="10dp" />
+
+    <ImageView
+        android:layout_width="188dp"
+        android:layout_height="188dp"
+        android:id="@+id/addplace_displaypic2"
+        android:src="@drawable/camera"
+        android:padding="10dp" />
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <Button
+            android:id="@+id/addplace_addmore"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Add More"
+            android:backgroundTint="#FFB74D"/>
+
+        <Button
+            android:id="@+id/addplace_done"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Finalize"
+            android:backgroundTint="#FFB74D"/>
+    </LinearLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/addplace_googlemap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp" />
+
+</LinearLayout>
+
+</ScrollView>

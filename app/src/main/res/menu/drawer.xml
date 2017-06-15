@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/about_me"
+            android:title="Add new Travelogue"
+            android:checked="false"
+            android:icon="@drawable/smile">
+
+        </item>
+        <item
+            android:id="@+id/recycler_view"
+            android:title="See Trravelogues"
+            android:checked="false"
+            android:icon="@drawable/lotus">
+
+        </item>
+        <item
+            android:id="@+id/recycler_view2"
+            android:title="Log Out"
+            android:checked="false"
+            android:icon="@drawable/bell">
+
+        </item>
+
+    </group>
+
+</menu>

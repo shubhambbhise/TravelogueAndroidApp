@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/addinn_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please add atleast one inn"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:editable="false"
+        android:textColor="#1B5E20"/>
+
+    <ImageView
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:id="@+id/addinn_displaypic"
+        android:src="@drawable/uploadimage"
+        android:layout_gravity="center_horizontal" />
+
+
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addinn_ratingbar"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/ratingBarStyleSmall"
+        android:isIndicator="true"
+        android:stepSize="0.1"
+        android:numStars="5" />
+
+    <EditText
+        android:id="@+id/addinn_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Inn Name"
+        android:backgroundTint="#F1F8E9"
+        android:padding="10dp"
+        android:textColor="#1B5E20"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/addinn_experience"
+        android:layout_gravity="center"
+        android:hint="Experience"
+        android:layout_weight="0.26"
+        android:backgroundTint="#F1F8E9"
+        android:padding="10dp"
+        android:textColor="#1B5E20"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/addinn_rating"
+        android:hint="Rating on scale of 5"
+        android:backgroundTint="#F1F8E9"
+        android:padding="10dp"
+        android:textColor="#1B5E20"
+        android:layout_marginTop="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/addinn_cost"
+        android:hint="Approx cost for single bed in $"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#F1F8E9"
+        android:padding="10dp"
+        android:textColor="#1B5E20"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/addinn_addmore"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Add More"
+            android:backgroundTint="#FFB74D"/>
+
+        <Button
+            android:id="@+id/addinn_done"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Done and Next"
+            android:backgroundTint="#FFB74D"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
